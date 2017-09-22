@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<h:form id="formCabecalho">
+		<div id="logo">
+			<span class="fa fa-home" />
+			<h:outputText value="Home" />
+		</div>
+		<div id="menu">
+			<p:commandLink id="btnMenu" type="button" icon="ui-icon-extlink">
+				<span class="fa fa-bars" />
+				
+			</p:commandLink>
+
+			<p:menu overlay="true" trigger="btnMenu" my="left top"
+				at="left bottom">
+				<p:submenu label="Menu">
+					<p:menuitem value="Save" icon="fa fa-floppy-o" />
+					<p:menuitem value="Update" icon="fa fa-refresh" />
+				</p:submenu>
+			</p:menu>
+		</div>
+
+		<div id="user">
+			<p:commandLink id="btnUser" type="button" icon="ui-icon-extlink">
+				<span class="fa fa-user" />
+			</p:commandLink>
+
+			<p:menu overlay="true" trigger="btnUser" my="left top"
+				at="left bottom">
+				<p:submenu label="Usuario">
+					<p:menuitem value="Login" icon="fa fa-sign-in" />
+					<p:menuitem value="Mudar Senha" icon="fa fa-lock" />
+				</p:submenu>
+			</p:menu>
+		</div>
+	</h:form>
+</ui:composition>

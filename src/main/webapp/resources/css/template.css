@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+body{
+	min-width: 360px;
+}
+
+#cabecalho{
+	clear: Both;
+	width: 100%;
+	
+	background: #34C2B3;
+	
+	clear: both;
+	overflow: hidden;
+}
+
+#logo, #menu, #user{
+	height: 50px;
+	font-size: 1.5em;
+	position: relative;
+}
+
+#logo{
+	float: left;
+	font-size: 3em;
+	left: 2%;
+}
+
+#menu{
+	float: left;
+	top: 12px;
+	left: 3.5%;
+}
+
+#user{
+	float: right;
+	top: 12px;
+	right: 2%;
+}
+
+#logo span, #menu span, #user span{
+	color: #000;
+}

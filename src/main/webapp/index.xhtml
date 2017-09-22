@@ -1,18 +1,14 @@
-<html xmlns="http://www.w3.org/1999/xhtml"  
-    xmlns:h="http://java.sun.com/jsf/html"  
-    xmlns:f="http://java.sun.com/jsf/core"  
-    xmlns:p="http://primefaces.org/ui">  
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/templates/template.xhtml">
 
-    <h:head> 
-    	<link rel="shortcut icon"
-    		href="#{request.contextPath}/resources/ico/home.ico"/>
-		<title>
-			Home
-		</title>
-    </h:head>  
-
-    <h:body>
-      	<p:outputLabel value="Olá Prime Faces" />
-      	<img src="#{request.contextPath}/resources/ico/home.ico"/>
-    </h:body>  
-</html>
+	<ui:define name="conteudo">
+		<h:form id="formIndex">
+			<p:outputLabel value="Olá Prime Faces" />
+		</h:form>
+	</ui:define>
+</ui:composition>

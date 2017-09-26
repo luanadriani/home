@@ -70,5 +70,6 @@
 			<layout>default</layout>
 		</repository>
 	</repositories>
+	
 	<version>1</version>
 </project>

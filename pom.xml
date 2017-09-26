@@ -13,6 +13,7 @@
 			<version>1.0.1.Final</version>
 			<scope>provided</scope>
 		</dependency>
+		
 		<!-- PRIMEFACES -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
@@ -24,16 +25,34 @@
 			<artifactId>all-themes</artifactId>
 			<version>1.0.10</version>
 		</dependency>
+		
 		<!-- HIBERNATE -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.11.Final</version>
+			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.2.Final</version>
+			<scope>provided</scope>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>5.2.11.Final</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>5.2.11.Final</version>
+			<scope>provided</scope>
 		</dependency>
 
 	</dependencies>

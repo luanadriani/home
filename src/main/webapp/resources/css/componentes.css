@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+input {
+	border-top: none!important;
+	border-left: none!important;
+	border-right: none!important;
+	box-shadow: none!important;
+	border-bottom: 2px solid #CCC!important;
+	border-radius: 0!important;
+	
+	width: 100%!important;
+}
+
+.ui-selectonemenu .ui-selectonemenu-trigger{
+	width: 30px!important;
+}
+
+.ui-icon-triangle-1-s{
+	background-position: -62px -13px;
+}

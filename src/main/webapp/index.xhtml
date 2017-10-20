@@ -16,41 +16,58 @@
 		<h1 class="aw-page-title">Contagem de Carboidratos</h1>
 
 		<h:form id="formIndex">
-			<h3>Responsive</h3>
 			<div class="row">
 				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
 					<div class="col-xm-12">
 						<h:outputText value="Nome:" />
 					</div>
-					
+
 					<div class="col-xm-12">
-						<p:inputText class="col-xm-12"/>
+						<p:inputText placeholder="Digite seu nome"/>
 					</div>
 				</div>
-				
+
 				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
 					<div class="col-xm-12">
 						<h:outputText value="Idade: " />
 					</div>
-					
+
 					<div class="col-xm-12">
-						<p:inputText class="col-xm-12"/>
+						<p:inputText placeholder="Digite sua idade" />
 					</div>
 				</div>
-				
+
 				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
 					<div class="col-xm-12">
 						<h:outputText value="Sexo: " />
 					</div>
-					
+
 					<div class="col-xm-12">
-						<p:inputText class="col-xm-12"/>
+						<p:selectOneMenu style="width: 100%">
+							<f:selectItem itemLabel="Selecione o sexo" itemValue=""
+								noSelectionOption="true" />
+
+							<f:selectItem itemLabel="Masculino" itemValue="M"/>
+
+							<f:selectItem itemLabel="Feminino" itemValue="F"/>
+						</p:selectOneMenu>
 					</div>
 				</div>
 
-				
+				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+					<div class="col-xm-12">
+						<h:outputText value="Data de Nascimento: " />
+					</div>
+
+					<div class="col-xm-12">
+						<p:calendar placeholder="Digite ou escolha"/>
+					</div>
+				</div>
+
+
 				<div class="col-xm-12 col-sm-12 col-md-12 col-lg-2">
-					<p:commandButton value="Buscar" style="top: 18px;"/>
+					<p:commandButton value="Buscar" style="top: 18px;"
+						icon="fa fa-search" />
 				</div>
 			</div>
 		</h:form>

@@ -6,11 +6,53 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	template="/WEB-INF/templates/Layout.xhtml">
 
+	<ui:define name="style">
+		/* div{
+			border: 1px solid #000;
+		} */
+	</ui:define>
+
 	<ui:define name="content">
-		<h1 class="aw-page-title">Home</h1>
-		
+		<h1 class="aw-page-title">Contagem de Carboidratos</h1>
+
 		<h:form id="formIndex">
-			Conteúdo do formulário
+			<h3>Responsive</h3>
+			<div class="row">
+				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+					<div class="col-xm-12">
+						<h:outputText value="Nome:" />
+					</div>
+					
+					<div class="col-xm-12">
+						<p:inputText class="col-xm-12"/>
+					</div>
+				</div>
+				
+				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+					<div class="col-xm-12">
+						<h:outputText value="Idade: " />
+					</div>
+					
+					<div class="col-xm-12">
+						<p:inputText class="col-xm-12"/>
+					</div>
+				</div>
+				
+				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+					<div class="col-xm-12">
+						<h:outputText value="Sexo: " />
+					</div>
+					
+					<div class="col-xm-12">
+						<p:inputText class="col-xm-12"/>
+					</div>
+				</div>
+
+				
+				<div class="col-xm-12 col-sm-12 col-md-12 col-lg-2">
+					<p:commandButton value="Buscar" style="top: 18px;"/>
+				</div>
+			</div>
 		</h:form>
 	</ui:define>
 </ui:composition>

@@ -1,12 +1,12 @@
 /* TOGGLE */
 .aw-toggle {
-	float: right;
+	float: left;
 	line-height: 50px;
-	margin-right: 15px;
+	margin-left: 15px;
 	
-	font-size: 24px;
+	font-size: 21px;
 	
-	color: #fff;
+	color: #000;
 }
 
 /* MENU */

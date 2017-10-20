@@ -42,7 +42,6 @@ public class Pessoa implements Serializable{
 	
 	//GET && SET
 
-
 	public String getNome() {
 		return nome;
 	}

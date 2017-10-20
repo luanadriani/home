@@ -11,9 +11,10 @@ import javax.persistence.PersistenceContextType;
 
 public class HomeEJB<T> implements Serializable{
 	private static final long serialVersionUID = -8838197216893074102L;
-
+	public static final String emHomePu = "homePU";
+	
 	private Class<T> classePersistente;
-
+	
 	@PersistenceContext(unitName = "homePU", type = PersistenceContextType.TRANSACTION)
 	private EntityManager em;
 
@@ -109,7 +110,11 @@ public class HomeEJB<T> implements Serializable{
 	}
 
 	/*CONEXÃO*/
-	protected EntityManager getEntityManager(String connection) {
-		return em;
+	protected EntityManager getEntityManager(String connection) throws Exception {
+		if(connection.equals(emHomePu)) {
+			return em;
+		}else {
+			throw new Exception("Conexão Invalida!");
+		}
 	}
 }

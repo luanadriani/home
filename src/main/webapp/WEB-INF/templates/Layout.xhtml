@@ -14,8 +14,9 @@
 	
 	<link rel="shortcut icon"
 		href="#{request.contextPath}/resources/ico/home.ico" />
-		
+	
 	<h:outputStylesheet library="css" name="reset.css"/>
+	<h:outputStylesheet library="css" name="bootstrapGrid.css"/>
 
 	<h:outputStylesheet library="algaworks" name="styles/custom.css" />
 	<h:outputStylesheet library="algaworks" name="styles/layout.css" />
@@ -23,12 +24,17 @@
 	
 	<h:outputScript target="body" library="primefaces" name="jquery/jquery.js" />
 	<h:outputScript target="body" library="algaworks" name="javascripts/app.js" />
+	
+	<style>
+	<ui:insert name="style" />
+	</style>
+	
 </h:head>
 
 <h:body>
 
 	<header class="aw-topbar">
-		<h:graphicImage library="algaworks" name="images/logo.png" />
+		<h:graphicImage library="algaworks" name="images/logo.png"/>
 		
 		<a href="#" class="aw-toggle  js-toggle">
 			<i class="fa  fa-bars" />

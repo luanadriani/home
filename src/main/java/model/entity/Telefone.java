@@ -26,6 +26,8 @@ public class Telefone implements Serializable{
 	@Column(name = "Numero", nullable = true)
 	private Integer numero;
 	
+	//FK
+	
 	@ManyToOne
 	@JoinColumn(name = "Id_Pessoa", nullable = false)
 	private Pessoa pessoa;

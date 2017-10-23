@@ -29,6 +29,8 @@ public class Endereco implements Serializable{
 	@Column(name = "Numero", nullable = true)
 	private Integer numero;
 	
+	//FK
+	
 	@ManyToOne
 	@JoinColumn(name = "Id_Cidade", nullable = false)
 	private Cidade cidade;

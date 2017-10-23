@@ -23,6 +23,8 @@ public class Estado implements Serializable{
 	@Column(name = "Nome", length = 100, nullable = true)
 	private String nome;
 	
+	//FK
+	
 	@ManyToOne
 	@JoinColumn(name = "Id_Pais", nullable = false)
 	private Pais pais;

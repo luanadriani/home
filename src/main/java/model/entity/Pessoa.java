@@ -36,6 +36,8 @@ public class Pessoa implements Serializable{
 	@Column(name = "Senha", length = 50, nullable = true)
 	private String senha;
 	
+	//FK
+	
 	@ManyToOne
 	@JoinColumn(name = "Id_Endereco", nullable = false)
 	private Endereco endereco;

@@ -1,0 +1,42 @@
+package model.entity;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Tipo_Refeicao")
+public class TipoRefeicao implements Serializable{
+	private static final long serialVersionUID = 5238418439131388526L;
+
+	@Id
+	@GeneratedValue
+	@Column(name = "Id_Tipo_Refeicao", nullable = false)
+	private Integer id;
+	
+	@Column(name = "Desc", length = 45, nullable = true)
+	private String desc;
+	
+	//GET && SET
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}
+}
+

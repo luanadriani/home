@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -16,9 +17,9 @@ public class Medico implements Serializable{
 	private static final long serialVersionUID = 2697775769698896780L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Medico", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "Ativo", nullable = true)
 	private Integer ativo;
@@ -30,10 +31,6 @@ public class Medico implements Serializable{
 	private Pessoa pessoa;
 	
 	//GET && SET
-
-	public Integer getId() {
-		return id;
-	}
 
 	public Integer getAtivo() {
 		return ativo;
@@ -51,7 +48,11 @@ public class Medico implements Serializable{
 		this.pessoa = pessoa;
 	}
 
-	public void setId(Integer id) {
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 }

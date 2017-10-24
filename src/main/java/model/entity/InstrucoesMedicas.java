@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,9 +19,9 @@ public class InstrucoesMedicas implements Serializable{
 	private static final long serialVersionUID = 1321509350279304608L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Instrucoes_Medicas", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "Data_Instrucao", nullable = true)
 	private Date dataInstrucao;
@@ -46,9 +47,6 @@ public class InstrucoesMedicas implements Serializable{
 	
 	//GET && SET
 
-	public Integer getId() {
-		return id;
-	}
 
 	public Integer getAtivo() {
 		return ativo;
@@ -89,10 +87,6 @@ public class InstrucoesMedicas implements Serializable{
 	public void setPaciente(Paciente paciente) {
 		this.paciente = paciente;
 	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	
 	public Medico getMedico() {
 		return medico;
@@ -100,6 +94,14 @@ public class InstrucoesMedicas implements Serializable{
 
 	public void setMedico(Medico medico) {
 		this.medico = medico;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }
 

@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,9 +15,9 @@ public class Pais implements Serializable{
 	private static final long serialVersionUID = -3825801567329034683L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Pais", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "Nome", length = 100, nullable = true)
 	private String nome;
@@ -32,11 +33,11 @@ public class Pais implements Serializable{
 		this.nome = nome;
 	}
 
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 }

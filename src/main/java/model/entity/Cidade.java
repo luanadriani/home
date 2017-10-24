@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -16,9 +17,9 @@ public class Cidade implements Serializable{
 	private static final long serialVersionUID = 8663136169662725242L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Cidade", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "Nome", length = 100, nullable = true)
 	private String nome;
@@ -40,14 +41,6 @@ public class Cidade implements Serializable{
 		this.nome = nome;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public Estado getEstado() {
 		return estado;
 	}
@@ -55,5 +48,14 @@ public class Cidade implements Serializable{
 	public void setEstado(Estado estado) {
 		this.estado = estado;
 	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 }
 

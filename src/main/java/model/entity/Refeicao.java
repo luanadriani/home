@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,9 +19,9 @@ public class Refeicao implements Serializable{
 	private static final long serialVersionUID = -6073547330878952449L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Refeicao", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	//Glicemia
 	
@@ -55,5 +56,77 @@ public class Refeicao implements Serializable{
 	private TipoRefeicao tipoRefeicao;
 	
 	//GET && SET
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public BigDecimal getGlicemiaObtida() {
+		return glicemiaObtida;
+	}
+
+	public void setGlicemiaObtida(BigDecimal glicemiaObtida) {
+		this.glicemiaObtida = glicemiaObtida;
+	}
+
+	public BigDecimal getGlicemiaAlvo() {
+		return glicemiaAlvo;
+	}
+
+	public void setGlicemiaAlvo(BigDecimal glicemiaAlvo) {
+		this.glicemiaAlvo = glicemiaAlvo;
+	}
+
+	public BigDecimal getInsulinaCorrecao() {
+		return insulinaCorrecao;
+	}
+
+	public void setInsulinaCorrecao(BigDecimal insulinaCorrecao) {
+		this.insulinaCorrecao = insulinaCorrecao;
+	}
+
+	public BigDecimal getInsulinaAlimentacao() {
+		return insulinaAlimentacao;
+	}
+
+	public void setInsulinaAlimentacao(BigDecimal insulinaAlimentacao) {
+		this.insulinaAlimentacao = insulinaAlimentacao;
+	}
+
+	public BigDecimal getInsulinaTotal() {
+		return insulinaTotal;
+	}
+
+	public void setInsulinaTotal(BigDecimal insulinaTotal) {
+		this.insulinaTotal = insulinaTotal;
+	}
+
+	public Date getDataHoraRefeicao() {
+		return dataHoraRefeicao;
+	}
+
+	public void setDataHoraRefeicao(Date dataHoraRefeicao) {
+		this.dataHoraRefeicao = dataHoraRefeicao;
+	}
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+	public TipoRefeicao getTipoRefeicao() {
+		return tipoRefeicao;
+	}
+
+	public void setTipoRefeicao(TipoRefeicao tipoRefeicao) {
+		this.tipoRefeicao = tipoRefeicao;
+	}
 }
 

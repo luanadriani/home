@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,9 +18,9 @@ public class Alimento implements Serializable{
 	private static final long serialVersionUID = 1056048933282832835L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Alimento", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "Desc", length = 60, nullable = true)
 	private String desc;
@@ -34,14 +35,6 @@ public class Alimento implements Serializable{
 	private TipoUnidadeMedida tipoUnidadeMedida;
 	
 	//GET && SET
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getDesc() {
 		return desc;
@@ -65,6 +58,14 @@ public class Alimento implements Serializable{
 
 	public void setTipoUnidadeMedida(TipoUnidadeMedida tipoUnidadeMedida) {
 		this.tipoUnidadeMedida = tipoUnidadeMedida;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }
 

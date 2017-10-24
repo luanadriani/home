@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -14,22 +15,14 @@ public class TipoUnidadeMedida implements Serializable{
 	private static final long serialVersionUID = 4563015623241357516L;
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "Id_Tipo_Unidade_Medida", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@Column(name = "Desc", length = 45, nullable = true)
 	private String desc;
 	
 	//GET && SET
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getDesc() {
 		return desc;
@@ -37,6 +30,14 @@ public class TipoUnidadeMedida implements Serializable{
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 }
 

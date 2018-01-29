@@ -1,20 +1,146 @@
 @charset "UTF-8";
 
+/*COR Thema*/
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all
+	/*CALENDAR quadro em volta*/ , .ui-fieldset-legend.ui-corner-all.ui-state-default
+	/*LEGEND do fieldset*/ , .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left
+	/*Botão*/, .ui-selectonemenu-items.ui-selectonemenu-list.ui-widget-content.ui-widget.ui-corner-all.ui-helper-reset/*SelectOneMenu quadro*/ {
+	background: #52c2bb;
+}
+
+/*COR Thema Selecionado*/
+.ui-datepicker-calendar .ui-state-default.ui-state-active
+	/*CALENDAR selecionado*/,
+.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all.ui-state-highlight {
+	background: #aaede9;
+	font-weight: bold;
+	color: #000;
+}
+
 input {
-	border-top: none!important;
-	border-left: none!important;
-	border-right: none!important;
-	box-shadow: none!important;
-	border-bottom: 2px solid #CCC!important;
-	border-radius: 0!important;
-	
-	width: 100%!important;
+	border-top: none !important;
+	border-left: none !important;
+	border-right: none !important;
+	box-shadow: none !important;
+	border-bottom: 2px solid #CCC !important;
+	border-radius: 0 !important;
+	width: 100% !important;
 }
 
-.ui-selectonemenu .ui-selectonemenu-trigger{
-	width: 30px!important;
+.ui-selectonemenu .ui-selectonemenu-trigger {
+	width: 30px !important;
 }
 
-.ui-icon-triangle-1-s{
+.ui-icon-triangle-1-s {
 	background-position: -62px -13px;
+}
+
+/*Botao*/
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left
+	{
+	box-shadow: none;
+	text-shadow: none;
+	border-radius: 3px;
+	border: 1px solid #52c2bb;
+	position: relative;
+	top: 2px;
+}
+
+/*Calendar*/
+
+/*quadro em volta*/
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all
+	{
+	border: none;
+	border-radius: 0;
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
+}
+
+/*quadro do mês*/
+.ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all
+	{
+	border: none;
+	background: none;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+	border: none;
+	background: none;
+	box-shadow: none;
+	text-shadow: none;
+	text-align: center;
+}
+
+.ui-datepicker-calendar .ui-state-default.ui-state-active {
+	border-radius: 20px;
+	font-weight: bold;
+}
+
+.ui-datepicker-calendar .ui-state-disabled, .ui-datepicker-calendar .ui-widget-content .ui-state-disabled
+	{
+	background: none;
+}
+
+/*FIELDSET*/
+
+/*legenda*/
+.ui-fieldset-legend.ui-corner-all.ui-state-default {
+	border: none;
+	border-radius: 0;
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
+	text-shadow: none;
+	padding: .3em .8em;
+}
+
+.ui-fieldset-toggler.ui-icon {
+	position: relative;
+	top: 3px;
+	left: -4px;
+}
+
+/*corpo*/
+.ui-fieldset.ui-widget.ui-widget-content.ui-corner-all.ui-hidden-container
+	{
+	border: none;
+	border-radius: 0;
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
+	text-shadow: none;
+}
+
+/*selectOneMenu*/
+.ui-selectonemenu-trigger.ui-state-default.ui-corner-right {
+	background: #FFF;
+	border: none;
+	box-shadow: none;
+}
+
+.ui-selectonemenu.ui-widget.ui-state-default.ui-corner-all {
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	box-shadow: none !important;
+	border-bottom: 2px solid #CCC;
+	border-radius: 0;
+}
+
+.ui-selectonemenu-label.ui-inputfield.ui-corner-all {
+	box-shadow: none;
+}
+
+.ui-selectonemenu-items.ui-selectonemenu-list.ui-widget-content.ui-widget.ui-corner-all.ui-helper-reset
+	{
+	border: none;
+	border-radius: 0;
+	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
+	text-shadow: none;
+	padding: .4em 0;
+}
+
+.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all{
+	padding: 8px 5px;
+	border-radius: 0;
+}
+
+.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all.ui-state-highlight{
+	
 }

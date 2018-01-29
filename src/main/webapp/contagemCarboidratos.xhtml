@@ -7,42 +7,67 @@
 	template="/WEB-INF/templates/Layout.xhtml">
 
 	<ui:define name="style">
-		/* div{
-			border: 1px solid #000;
-		} TEST*/
+
 	</ui:define>
 
 	<ui:define name="content">
 		<h1 class="aw-page-title">Contagem de Carboidratos</h1>
 
-		<h:form id="formIndex">
-			<div class="row">
-				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
-					<div class="col-xm-12">
-						<p:outputLabel for="gliObtida" value="Glicemia Obtida:" />
+		<p:fieldset legend="Teste" toggleable="true">
+			<h:form id="formIndex">
+				<div class="row">
+					<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="col-xm-12">
+							<p:outputLabel for="gliObtida" value="Glicemia Obtida:" />
+						</div>
+
+						<div class="col-xm-12">
+							<p:inputNumber id="gliObtida"
+								placeholder="Digite a Glicemia Obtida" />
+						</div>
 					</div>
 
-					<div class="col-xm-12">
-						<p:inputNumber id="gliObtida"
-							placeholder="Digite a Glicemia Obtida"/>
+					<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="col-xm-12">
+							<p:outputLabel for="gliAlvo" value="Glicemia Alvo:" />
+						</div>
+
+						<div class="col-xm-12">
+							<p:inputNumber id="gliAlvo" placeholder="Digite a Glicemia Alvo" />
+						</div>
+					</div>
+
+					<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="col-xm-12">
+							<p:outputLabel for="testeCalender" value="Glicemia Alvo:" />
+						</div>
+
+						<div class="col-xm-12">
+							<p:calendar id="testeCalender" placeholder="DD/MM/AAAA" />
+						</div>
+					</div>
+
+					<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+						<div class="col-xm-12">
+							<p:outputLabel for="testeSelectOneMenu" value="Console: " />
+						</div>
+
+						<div class="col-xm-12">
+							<p:selectOneMenu id="testeSelectOneMenu" style="width:125px">
+								<f:selectItem itemLabel="Select One" itemValue="" />
+								<f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+								<f:selectItem itemLabel="PS4" itemValue="PS4" />
+								<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+							</p:selectOneMenu>
+						</div>
+					</div>
+
+					<div class="col-xm-12 col-sm-12 col-md-12 col-lg-2"
+						style="margin-top: 18px;">
+						<p:commandButton value="Calcular" icon="fa fa-calculator" />
 					</div>
 				</div>
-
-				<div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
-					<div class="col-xm-12">
-						<p:outputLabel for="gliAlvo" value="Glicemia Alvo:" />
-					</div>
-
-					<div class="col-xm-12">
-						<p:inputNumber id="gliAlvo" placeholder="Digite a Glicemia Alvo"/>
-					</div>
-				</div>
-
-				<div class="col-xm-12 col-sm-12 col-md-12 col-lg-2">
-					<p:commandButton value="Calcular" style="top: 18px;"
-						icon="fa fa-calculator" />
-				</div>
-			</div>
-		</h:form>
+			</h:form>
+		</p:fieldset>
 	</ui:define>
 </ui:composition>

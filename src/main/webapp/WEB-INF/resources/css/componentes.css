@@ -1,17 +1,16 @@
 @charset "UTF-8";
 
 /*COR Thema*/
-.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all
-	/*CALENDAR quadro em volta*/ , .ui-fieldset-legend.ui-corner-all.ui-state-default
+.ui-datepicker-calendar .ui-state-default.ui-state-active
+	/*Calendario dia Selecionado*/ , .ui-fieldset-legend.ui-corner-all.ui-state-default
 	/*LEGEND do fieldset*/ , .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left
-	/*Botão*/, .ui-selectonemenu-items.ui-selectonemenu-list.ui-widget-content.ui-widget.ui-corner-all.ui-helper-reset/*SelectOneMenu quadro*/ {
+	/*Botão*/, .ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all.ui-state-highlight/*SelectOneMenu item selecionado*/{
 	background: #52c2bb;
 }
 
 /*COR Thema Selecionado*/
-.ui-datepicker-calendar .ui-state-default.ui-state-active
-	/*CALENDAR selecionado*/,
-.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all.ui-state-highlight {
+	.ui-datepicker-calendar .ui-datepicker-today .ui-state-default.ui-state-highlight
+	/*CALENDAR dia Atual*/{
 	background: #aaede9;
 	font-weight: bold;
 	color: #000;
@@ -52,7 +51,7 @@ input {
 .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all
 	{
 	border: none;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
 }
 
@@ -69,9 +68,15 @@ input {
 	box-shadow: none;
 	text-shadow: none;
 	text-align: center;
+	padding: 3px;
+	height: 24.4px;
+	width: 25.4px;
+	margin: auto;
 }
 
-.ui-datepicker-calendar .ui-state-default.ui-state-active {
+.ui-datepicker-calendar .ui-state-default.ui-state-active,
+	.ui-datepicker-calendar .ui-datepicker-today .ui-state-default.ui-state-highlight
+	{
 	border-radius: 20px;
 	font-weight: bold;
 }
@@ -86,7 +91,7 @@ input {
 /*legenda*/
 .ui-fieldset-legend.ui-corner-all.ui-state-default {
 	border: none;
-	border-radius: 0;
+	border-radius: 1px;
 	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
 	text-shadow: none;
 	padding: .3em .8em;
@@ -102,7 +107,7 @@ input {
 .ui-fieldset.ui-widget.ui-widget-content.ui-corner-all.ui-hidden-container
 	{
 	border: none;
-	border-radius: 0;
+	border-radius: 3px;
 	box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.38);
 	text-shadow: none;
 }
@@ -136,11 +141,12 @@ input {
 	padding: .4em 0;
 }
 
-.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all{
+.ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all {
 	padding: 8px 5px;
 	border-radius: 0;
 }
 
 .ui-selectonemenu-item.ui-selectonemenu-list-item.ui-corner-all.ui-state-highlight{
-	
+	font-weight: bold;
+	color: #000;
 }
